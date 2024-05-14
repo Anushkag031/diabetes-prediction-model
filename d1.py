@@ -16,5 +16,27 @@ print(diabetes.head())
 print(diabetes.shape)
 
 print("stats/measures : ", diabetes.describe())
-print(diabetes['Outcome'].value_counts()) # 0 - non-diabetic, 1 - diabetic
+
+# 0 - non-diabetic, 1 - diabetic
+print(diabetes['Outcome'].value_counts()) 
+
+#gives mean values for both these cases
+print(diabetes.groupby('Outcome').mean())
+
+#separating data and lables
+X=diabetes.drop(columns='Outcome',axis=1)
+Y=diabetes['Outcome']
+
+print("dropping",X)
+print("Y",Y)
+
+#data standardization
+scaler=StandardScaler()
+
+#fitting the model
+scaler.fit(X)
+
+standardized_values=scaler.transform(X)
+
+
 
