@@ -15,3 +15,5 @@ print(diabetes.head())
 #entries in the model
 print(diabetes.shape)
 
+print("stats/measures : ", diabetes.describe())
+
