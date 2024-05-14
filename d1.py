@@ -16,4 +16,5 @@ print(diabetes.head())
 print(diabetes.shape)
 
 print("stats/measures : ", diabetes.describe())
+print(diabetes['Outcome'].value_counts()) # 0 - non-diabetic, 1 - diabetic
 
