@@ -14,3 +14,4 @@ diabetes = pd.read_csv('/Users/anushkag031/Documents/machinelearning/diab-pred/d
 print(diabetes.head())
 #entries in the model
 print(diabetes.shape)
+
