@@ -64,6 +64,7 @@ classifier.fit(X_train,Y_train)
 
 #accuracy score on training data
 X_train_accuracy=classifier.predict(X_train)
+training_data_accuracy=accuracy_score(X_train_accuracy,Y_train) # training data accuracy, using trained ml model
 
 
 
