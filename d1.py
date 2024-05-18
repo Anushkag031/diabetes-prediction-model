@@ -59,5 +59,11 @@ classifier=svm.SVC(kernel='linear') #linear kernel
 #training the support vector machine
 classifier.fit(X_train,Y_train)
 
+#evaluation of the model
+#1. accuracy score
+
+#accuracy score on training data
+X_train_accuracy=classifier.predict(X_train)
+
 
 
