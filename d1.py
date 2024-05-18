@@ -36,7 +36,19 @@ scaler=StandardScaler()
 #fitting the model
 scaler.fit(X)
 
-standardized_values=scaler.transform(X)
+standardized_values=scaler.transform(X) #to get data in same range
+
+print(standardized_values)
+
+X=standardized_values #saving the standardized values
+Y=diabetes['Outcome']
+
+print(X)
+print(Y)
+
+
+#train test split
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.2,stratify=Y,random_state=2)
 
 
 
