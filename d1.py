@@ -81,5 +81,12 @@ input_data=(5,166,72,19,175,25.8,0.587,51)
 input_data_as_numpy_array=np.asarray(input_data)
 
 #reshape the array as we are predicting for one instance
-input_data_reshaped=input_data_as_numpy_array.reshape(1,-1)
+input_data_reshaped=input_data_as_numpy_array.reshape(1,-1) # -1 is used to get the data in the same format
+
+#standardize the input data
+std_data=scaler.transform(input_data_reshaped)
+print("std data : ",std_data)
+
+prediction=classifier.predict(std_data)
+print("prediction : ",prediction)
 
