@@ -90,3 +90,12 @@ print("std data : ",std_data)
 prediction=classifier.predict(std_data)
 print("prediction : ",prediction)
 
+if (prediction[0]==0): # prediction[0] is used to get the value from the array (prediction[] is an array)
+    print("The person is not diabetic")
+else:
+    print("The person is diabetic")
+
+#output : The person is diabetic
+
+
+
