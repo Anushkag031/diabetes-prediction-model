@@ -43,12 +43,21 @@ print(standardized_values)
 X=standardized_values #saving the standardized values
 Y=diabetes['Outcome']
 
-print(X)
-print(Y)
+print("X :",X)
+print("Y :",Y)
 
 
 #train test split
-X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.2,stratify=Y,random_state=2)
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.2,stratify=Y,random_state=2) #stratify is used to maintain the ratio of 0 and 1 in the test and train data
+#random_state is used to get the same data everytime we run the code
+
+print(X.shape, X_train.shape, X_test.shape) #output : (768, 8) (614, 8) (154, 8)
+
+#training the model
+classifier=svm.SVC(kernel='linear') #linear kernel
+
+#training the support vector machine
+classifier.fit(X_train,Y_train)
 
 
 
