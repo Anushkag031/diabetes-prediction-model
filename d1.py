@@ -66,5 +66,11 @@ classifier.fit(X_train,Y_train)
 X_train_accuracy=classifier.predict(X_train)
 training_data_accuracy=accuracy_score(X_train_accuracy,Y_train) # training data accuracy, using trained ml model
 
+print("Training accuracy score : ",training_data_accuracy)
 
+#accuracy score on test data (imp)
+X_test_accuracy=classifier.predict(X_test)
+test_data_accuracy=accuracy_score(X_test_accuracy,Y_test) # test data accuracy, using trained ml model
+
+print("Test accuracy score : ",test_data_accuracy)
 
